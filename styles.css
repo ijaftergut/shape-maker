@@ -5,8 +5,11 @@
   justify-content: space-around;
 }
 .container > div {
+  display: flex;
   border: solid 1px black;
   margin: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .sm {
@@ -24,14 +27,31 @@
   height: 50px;
 }
 
+.xl {
+  width: 100px;
+  height: 100px;
+}
+
 .red {
   background-color: red;
+  color: white;
+}
+
+.yellow {
+  background-color: yellow;
+  
 }
 
 .blue {
   background-color: blue;
+  color: white;
 }
 
 .green {
   background-color: green;
+  color: white;
 }
+.circle {
+  border-radius: 50%;
+}
+
