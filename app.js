@@ -29,11 +29,27 @@ function render(){
 }
 
 render();
-const i = setInterval(function(){
-  const newShape = randomShape();
-  shapes.push(newShape);
-  render();
-  if (shapes.length === 20){
-    clearInterval(i)
-  }
-}, 500);
+// const i = setInterval(function(){
+//   const newShape = randomShape();
+//   shapes.push(newShape);
+//   render();
+//   // if (shapes.length === 20){
+//   //   clearInterval(i)
+//   // }
+// }, 500);
+
+const stopButton = document.querySelector(".stopbutton");
+const startButton = document.querySelector(".startbutton");
+stopButton.addEventListener("click", () => {
+  clearInterval(i);
+})
+startButton.addEventListener("click", () => {
+  i = setInterval(function(){
+    const newShape = randomShape();
+    shapes.push(newShape);
+    render();
+    // if (shapes.length === 20){
+    //   clearInterval(i)
+    // }
+  }, 500);
+})
